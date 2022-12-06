@@ -27,9 +27,9 @@ router.patch("/:id", async function (req, res) {
 });
 
 //DELETE a post
-router.delete('/:id', async function (req, res) {
-    const posts = await deletePost(req.params.id);
-    res.json({success:true, payload: posts})
-})
+router.delete("/:id", async function (req, res) {
+  const posts = await deletePost(req.params.id);
+  res.json({ success: true, payload: posts });
+});
 
 export default router;
