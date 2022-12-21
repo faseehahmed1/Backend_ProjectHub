@@ -10,6 +10,7 @@ import commentsRouter from "./routes/comments.js";
 
 // Initialize our express app
 const app = express();
+// app.use(cors());
 
 // Use morgan (third party middle)
 app.use(morgan("dev"));
@@ -17,7 +18,6 @@ app.use(morgan("dev"));
 // Tell express to serve static files
 app.use(express.static("public"));
 app.use(express.json());
-// app.use(cors());
 
 app.use("/api/posts", postRouter);
 // app.use("/api/users", usersRouter);
