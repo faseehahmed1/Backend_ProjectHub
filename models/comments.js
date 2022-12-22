@@ -2,7 +2,7 @@ import query from "../db/index.js";
 
 export async function getAllComments() {
   // Query the database and return all comments
-  const result = await query(`SELECT * FROM comments`);
+  const result = await query(`SELECT * FROM comments ORDER BY id ASC`);
   return result.rows;
 }
 
