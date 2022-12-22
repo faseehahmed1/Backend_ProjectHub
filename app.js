@@ -1,7 +1,7 @@
 // Import express, morgan, cors
 import express from "express";
 import morgan from "morgan";
-// import cors from "cors";
+import cors from "cors";
 
 // Import the routes
 import postRouter from "./routes/posts.js";
@@ -10,7 +10,7 @@ import commentsRouter from "./routes/comments.js";
 
 // Initialize our express app
 const app = express();
-// app.use(cors());
+app.use(cors());
 
 // Use morgan (third party middle)
 app.use(morgan("dev"));
